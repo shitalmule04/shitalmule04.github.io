@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Shital Mule's Blog</title><link href="http://shitalmule04.github.io/" rel="alternate"></link><link href="http://shitalmule04.github.io/feeds/all.atom.xml" rel="self"></link><id>http://shitalmule04.github.io/</id><updated>2017-10-10T00:00:00+05:30</updated><entry><title>Nickname Registration with NickServ over IRC network</title><link href="http://shitalmule04.github.io/Nickname-Registration-with-NickServ-over-IRC-network.html" rel="alternate"></link><published>2017-10-10T00:00:00+05:30</published><updated>2017-10-10T00:00:00+05:30</updated><author><name>Shital Mule</name></author><id>tag:shitalmule04.github.io,2017-10-10:/Nickname-Registration-with-NickServ-over-IRC-network.html</id><summary type="html"></summary><content type="html">&lt;h3&gt;What is NickServ?&lt;/h3&gt;
+&lt;p&gt;It is not only service but also command on IRC network use to maintain the uniqueness with their nickname.                                           &lt;br&gt;
+If the user is register their nickname with Nickserv then no one can use that nickname, even registered user                                          can claim if someone tries to do so.      &lt;/p&gt;
+&lt;h3&gt;Register nickname with NickServ&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;/msg NickServ help&lt;/strong&gt; Shows all commands available with NickServ                                                                                      &lt;/p&gt;
+&lt;h2&gt;&lt;img alt="Nick Help" src="../images/NickServ1.png"&gt;&lt;/h2&gt;
+&lt;p&gt;To register nickname use  following command                                                                                                            &lt;/p&gt;
+&lt;h2&gt;&lt;img alt="Nick Register" src="../images/NickServ2.png"&gt;&lt;/h2&gt;
+&lt;p&gt;Activation mail will send to your email account. It is necessary to verify your account registration within one day
+otherwise nickname gets expire.
+Type following command as provided in mail:                                                                                                            &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;/msg NickServ VERIFY REGISTER &lt;yournickename&gt; &lt;passwordGivenInMail&gt;                                                                                &lt;br&gt;
+Now you register your nickname successfully on IRC network.                                                                                            &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To see all your details type &lt;strong&gt;/msg nickserv info &lt;USERNAME&gt; all&lt;/strong&gt; USERNAME is your nickname.                                                        &lt;br&gt;
+It will show following information( note: my nickname is smule)&lt;/p&gt;
+&lt;h2&gt;&lt;img alt="Nick Register" src="../images/NickServ3.png"&gt;&lt;/h2&gt;
+&lt;h3&gt;Fixing Nickname collision&lt;/h3&gt;
+&lt;p&gt;So cleaver client can use your nickname as alternative along with underscore, so to identify and remove your ghost from server &lt;strong&gt;ghost&lt;/strong&gt; command     is used.                                                                                                                                               &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;/msg NickServ ghost &lt;yournickname_&gt; &lt;em&gt;password&lt;/em&gt;&lt;/strong&gt;                                                                                                    &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If your ghost not exist on server then it will show message &lt;strong&gt;You may not ghost yourself&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3&gt;To check status&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;/msg NickServ STATUS&lt;/strong&gt;                                                                                                                              &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;To Change Email ID&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;/msg NickServ SET EMAIL &lt;new_email&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;To Logout&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;/msg NickServ LOGOUT&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;To Login&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;/msg NickServ identify &lt;your nickname&gt; &lt;Your-Password&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><category term="general"></category></entry><entry><title>File Status Lifecycle in Git</title><link href="http://shitalmule04.github.io/file-status-lifecycle-in-git.html" rel="alternate"></link><published>2017-10-10T00:00:00+05:30</published><updated>2017-10-10T00:00:00+05:30</updated><author><name>Shital Mule</name></author><id>tag:shitalmule04.github.io,2017-10-10:/file-status-lifecycle-in-git.html</id><summary type="html"></summary><content type="html">&lt;h3&gt;File has four states in Status lifecycle. that are&lt;/h3&gt;
+&lt;h5&gt;Untracked&lt;/h5&gt;
+&lt;h5&gt;Unmodified&lt;/h5&gt;
+&lt;h5&gt;Modified&lt;/h5&gt;
+&lt;h5&gt;Staged&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Untracked state :&lt;/strong&gt; Files are present in the local directory, but not added in the github repository index.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unmodified state :&lt;/strong&gt; Files are already present in directory or added using &lt;em&gt;$git add&lt;/em&gt; command. If some changes did, 
+then it not get tracked. Also after commiting the changes file status become unmodified.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Modified state :&lt;/strong&gt; When previously tracked file is edited, but not commit the changes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Staged state :&lt;/strong&gt; When files committed and ready to push in git repository, then they have staged status.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;File has two states tracked and untracked. Previous snapshot are maintained in tacked file. &lt;/p&gt;
+&lt;h3&gt;Lets see example to unserstand above concepts:&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;$ git init&lt;/strong&gt;                                                                                                                                       &lt;br&gt;
+&lt;strong&gt;$ git clone https://github.com/shitalmule04/python-learning.git&lt;/strong&gt;                                                                                  &lt;br&gt;
+OR                                                                                                                                                   &lt;br&gt;
+&lt;strong&gt;$ git clone  https://github.com/shitalmule04/python-learning.git examples&lt;/strong&gt;                                                                          &lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;git init&lt;/strong&gt; creates Git repository skeleton(.git) which contains all neccesary repository files in the currently working directory.                 &lt;br&gt;
+&lt;strong&gt;git clone&lt;/strong&gt; used to copy existing project locate in repository. From above example, project get copied into &lt;em&gt;python-learning&lt;/em&gt; directory,
+Whereas in second case existing project will get copy into examples directory.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;$ vi README.md&lt;/strong&gt;                                                                                                                                   &lt;br&gt;
+&lt;strong&gt;$ git status&lt;/strong&gt;                                                                                                                                       &lt;/p&gt;
+&lt;h2&gt;&lt;img alt="unstage" src="../images/Untracked-and-not-staged1.png"&gt;&lt;/h2&gt;
+&lt;p&gt;README.md is previously tracked file, but changes in file does not commited and hence it showing output as &lt;em&gt;Changes not staged for commit&lt;/em&gt;.
+So to track the files we need to add file.
+There are three way to add file:                                                                                                                     &lt;br&gt;
+&lt;strong&gt; $git add filename &lt;/strong&gt;          ==&amp;gt;used to add particular file                                                                              &lt;br&gt;
+&lt;strong&gt; $git add  .&lt;/strong&gt;                 ==&amp;gt;use to add all untracked file and modified file                                                          &lt;br&gt;
+&lt;strong&gt; $git add /path/to/filename&lt;/strong&gt;  ==&amp;gt;use to add file at particular location                                                                     &lt;/p&gt;
+&lt;p&gt;We'll use,&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;"$ git add * "&lt;/strong&gt; and then &lt;strong&gt;"$ git status"&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Then output will be,&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Adding" src="../images/GitAdd2.png"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Now files are modified and need to change status into staged.Commit a snapshot of all changes in the working directory. 
+This only includes modifications to tracked files
+ Three way to commit changes:                                                                                                                        &lt;br&gt;
+ 1. $git commit -a  -m " your message"                                                                                                               &lt;br&gt;
+ 2. git commit -m " your Message"                                                                                                                    &lt;br&gt;
+ 3. gitcommit -v -m "Message"                                                                                                                          &lt;/p&gt;
+&lt;p&gt;Lets see one by one,&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;$ git commit -a -m "First Commit"&lt;/strong&gt;
+&lt;img alt="commit1" src="../images/GitCommit3.png"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;$ git commit -m "Second Commit"&lt;/strong&gt;
+&lt;img alt="commit2" src="../images/GitCommit4.png"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;$ git commit -v -m "Third Commit"&lt;/strong&gt;
+&lt;img alt="commit3" src="../images/GitCommit5.png"&gt;&lt;/p&gt;
+&lt;p&gt;Commit performed, Now time to push files from staging area to git repository by following commands&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;$ git push&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To push changes from staging area to git repository&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;$ git push -u origin master&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Branch master set up to track remote branch master from origin.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;$ git pull origin master&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To make directory locally available &lt;/p&gt;
+&lt;p&gt;Thanks.! Please share and comment.&lt;/p&gt;</content><category term="general"></category></entry></feed>

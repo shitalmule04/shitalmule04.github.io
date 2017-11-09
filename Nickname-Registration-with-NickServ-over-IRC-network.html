@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Nickname Registration with NickServ over IRC network &ndash; Shital Mule's Blog</title>
+
+    <!-- Meta -->
+    <meta name="description" content="Shital Mule's Blog &ndash; ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Social -->
+    <meta property="article:author" content="Shital Mule" />
+    <meta property="article:section" content="IRC" />
+    <meta property="article:published_time" content="2017-10-10" />
+
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Nickname Registration with NickServ over IRC network"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:site_name" content="Shital Mule's Blog" />
+    <meta property="og:url" content="http://shitalmule04.github.io/Nickname-Registration-with-NickServ-over-IRC-network.html"/>
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Nickname Registration with NickServ over IRC network">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:url" content="http://shitalmule04.github.io/Nickname-Registration-with-NickServ-over-IRC-network.html">
+
+    <!-- Feed -->
+    <link rel="alternate" type="application/atom+xml" href="http://shitalmule04.github.io/feeds/all.atom.xml" title="Shital Mule's Blog Atom Feed" />
+    <link rel="alternate" type="application/atom+xml" href="http://shitalmule04.github.io/feeds/irc.atom.xml" title="Shital Mule's Blog Categories Atom Feed" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+    <link rel="stylesheet" type="text/css" href="http://shitalmule04.github.io/theme/css/w3.css">
+    <link rel="stylesheet" type="text/css" href="http://shitalmule04.github.io/theme/css/style.css">
+    <link rel="stylesheet" type="text/css" href="http://shitalmule04.github.io/theme/css/jqcloud.css">
+    <link rel="stylesheet" type="text/css" href="http://shitalmule04.github.io/theme/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://shitalmule04.github.io/theme/css/pygments-highlight-github.css">
+    <link rel="stylesheet" type="text/css" href="http://shitalmule04.github.io/../static/custom.css">
+
+    <!-- Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="http://shitalmule04.github.io/favicon.ico">
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="http://shitalmule04.github.io/theme/js/jqcloud.min.js"></script>
+  </head>
+
+  <body>
+    <div class="w3-row w3-card w3-white">
+      <header id="header">
+        <a href="http://shitalmule04.github.io" id="header-logo" title="Home">SM</a>
+        <nav id="header-menu">
+          <ul>
+            <li class="w3-bottombar w3-border-white w3-hover-border-green" ><a href="http://shitalmule04.github.io/category/git.html">git</a></li>
+            <li class="w3-bottombar w3-border-white w3-hover-border-green" style="font-weight: bold;"><a href="http://shitalmule04.github.io/category/irc.html">IRC</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+
+
+    <br><br><br>
+
+    <article>
+      <header class="w3-container col-main">
+        <h1>Nickname Registration with NickServ over IRC network</h1>
+        <div class="post-info">
+          <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+            <span><time datetime="2017-10-10T00:00:00+05:30">Tue 10 October 2017</time> in <a href="http://shitalmule04.github.io/category/irc.html" title="All articles in category IRC">IRC</a></span>
+          </div>
+          <div>
+            <span class="w3-tag w3-light-grey w3-text-green w3-hover-green">
+              <a href="http://shitalmule04.github.io/tag/general.html" title="All articles with General tag">#general</a>
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <br>
+
+
+      <div class="col-main w3-container">
+        <section id="content">
+          <h3>What is NickServ?</h3>
+<p>It is not only service but also command on IRC network use to maintain the uniqueness with their nickname.                                           <br>
+If the user is register their nickname with Nickserv then no one can use that nickname, even registered user                                          can claim if someone tries to do so.      </p>
+<h3>Register nickname with NickServ</h3>
+<p><strong>/msg NickServ help</strong> Shows all commands available with NickServ                                                                                      </p>
+<h2><img alt="Nick Help" src="../images/NickServ1.png"></h2>
+<p>To register nickname use  following command                                                                                                            </p>
+<h2><img alt="Nick Register" src="../images/NickServ2.png"></h2>
+<p>Activation mail will send to your email account. It is necessary to verify your account registration within one day
+otherwise nickname gets expire.
+Type following command as provided in mail:                                                                                                            </p>
+<blockquote>
+<p>/msg NickServ VERIFY REGISTER <yournickename> <passwordGivenInMail>                                                                                <br>
+Now you register your nickname successfully on IRC network.                                                                                            </p>
+</blockquote>
+<p>To see all your details type <strong>/msg nickserv info <USERNAME> all</strong> USERNAME is your nickname.                                                        <br>
+It will show following information( note: my nickname is smule)</p>
+<h2><img alt="Nick Register" src="../images/NickServ3.png"></h2>
+<h3>Fixing Nickname collision</h3>
+<p>So cleaver client can use your nickname as alternative along with underscore, so to identify and remove your ghost from server <strong>ghost</strong> command     is used.                                                                                                                                               </p>
+<blockquote>
+<p><strong>/msg NickServ ghost <yournickname_> <em>password</em></strong>                                                                                                    </p>
+</blockquote>
+<p>If your ghost not exist on server then it will show message <strong>You may not ghost yourself</strong>.</p>
+<h3>To check status</h3>
+<blockquote>
+<p><strong>/msg NickServ STATUS</strong>                                                                                                                              </p>
+</blockquote>
+<h3>To Change Email ID</h3>
+<blockquote>
+<p><strong>/msg NickServ SET EMAIL <new_email></strong></p>
+</blockquote>
+<h3>To Logout</h3>
+<blockquote>
+<p><strong>/msg NickServ LOGOUT</strong></p>
+</blockquote>
+<h3>To Login</h3>
+<blockquote>
+<p><strong>/msg NickServ identify <your nickname> <Your-Password></strong></p>
+</blockquote>
+        </section>
+
+        <br><br><br>
+
+        <footer>
+          <div class="adjust-width">
+            <div id="author-block" class="w3-light-grey w3-border">
+              <div id="author-info">
+                <a href="http://shitalmule.wordpress.com"><img style="width: 60px; height: 60px;" src="favicon.ico" onerror="this.src='theme/images/avatar.png'" alt="Avatar"></a>
+                <div style="margin-left: 20px; margin-top: 15px;">
+                  <a href="http://shitalmule.wordpress.com"><span id="author-name" class="w3-hover-text-dark-grey">Shital Mule</span></a>
+                  <p id="author-story">Hello world! I’m Shital Mule. I like travelling and Python.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br><br><br>
+
+          <p style="font-size:10pt; font-style: italic;">Did you like this article? Share it with your friends!</p>
+          <div id="share" class="share">
+            <a href="http://www.facebook.com/sharer.php?u=http%3A//shitalmule04.github.io/Nickname-Registration-with-NickServ-over-IRC-network.html&amp;t=Shital%20Mule%27s%20Blog%3A%20Nickname%20Registration%20with%20NickServ%20over%20IRC%20network" target="_blank" class="w3-btn w3-indigo">
+              <i class="fa fa-facebook"></i> <span>Facebook</span>
+            </a>
+            <a href="http://twitter.com/share?url=http%3A//shitalmule04.github.io/Nickname-Registration-with-NickServ-over-IRC-network.html&amp;text=Shital%20Mule%27s%20Blog%3A%20Nickname%20Registration%20with%20NickServ%20over%20IRC%20network" target="_blank" class="w3-btn w3-blue">
+              <i class="fa fa-twitter"></i> <span>Twitter</span>
+            </a>
+            <a href="https://plus.google.com/share?url=http%3A//shitalmule04.github.io/Nickname-Registration-with-NickServ-over-IRC-network.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="w3-btn w3-red">
+              <i class="fa fa-google-plus"></i> <span>Google</span>
+            </a>
+          </div>
+
+          <br><br><br>
+
+
+
+        </footer>
+      </div>
+    </article>
+
+
+    <footer id="footer">
+      <div id="footer-copyright" class="w3-center w3-small w3-text-grey w3-padding-48">
+        <span>
+          &copy;
+          Shital Mule
+ | <a href="http://shitalmule04.github.io/feeds/all.atom.xml">Atom feed <i class="fa fa-rss" aria-hidden="true"></i></a>        </span>
+      </div>
+    </footer>
+
+
+
+  </body>
+</html>
